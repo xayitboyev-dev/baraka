@@ -1,0 +1,14 @@
+{
+    "commands": [
+        {
+            "command": "/start",
+            "description": "Botni yangilash"
+        }
+    ],
+    "channels": [
+        {
+            "username": "@safo_buildings",
+            "id": "-1003969992767"
+        }
+    ]
+}
