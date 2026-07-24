@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --primary: #ffa311;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   background-color: rgb(242 242 246);
