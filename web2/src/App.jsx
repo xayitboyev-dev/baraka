@@ -108,7 +108,7 @@ export default function App() {
 
           <div className="relative">
             <img src="/hero2.png" className="" />
-            <a href="https://t.me/kuhisim" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
+            <a href="https://t.me/baraka_premiumm" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
               <img src="/telegram.png" className="w-7" />
               TELEGRAM KANAL
             </a>
