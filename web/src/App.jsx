@@ -99,15 +99,15 @@ export default function App() {
         </div>
 
         {/* Hero */}
-        <div className="flex flex-col pt-8" style={{ background: "linear-gradient(to bottom, #93b8de, #93b8de, #93b8de, transparent)" }}>
+        <div className="flex flex-col mb-20" style={{ background: "linear-gradient(to bottom, #93b8de, #93b8de, #93b8de, transparent)" }}>
           {/* <h2 className="roboto-condensed-bold text-center text-3xl font-bold text-white">OLMALIQ SHAHRIDA</h2>
           <h2 className="roboto-condensed-bold text-center text-4xl text-[var(--primary)] font-bold bg-gradient-to-b from-orange-500 via-yellow-500 to-orange-500 bg-clip-text">3 900 000 so‘mdan</h2>
           <h2 className="roboto-condensed-bold text-center text-3xl font-bold text-white">XONADON XARID QILING</h2> */}
-          <img src="/heroText.png" />
+          <img src="/heroText.png" className="translate-y-12 z-10" />
 
           <div className="relative">
             <img src="/hero2.png" className="w-full" />
-            <form onSubmit={onFormSubmit} className="absolute flex flex-col w-[90%] shadow bottom-0 left-[50%] translate-x-[-50%] gap-2 bg-white rounded-2xl p-4 pt-3">
+            <form onSubmit={onFormSubmit} className="absolute flex flex-col w-[90%] shadow bottom-[-70px] left-[50%] translate-x-[-50%] gap-2 bg-white rounded-2xl p-4 pt-3">
               <h2 className="text-center text-xl font-bold">Ariza qoldirish</h2>
               <input type="text" name="name" className="p-3 bg-white border-1 border-[var(--primary)] rounded-2xl placeholder:text-gray-400" placeholder="Ismingiz" />
               <input type="text" name="phone" className="p-3 bg-white border-1 border-[var(--primary)] rounded-2xl" placeholder="Telefon" defaultValue={"+998"} inputMode="decimal" />
