@@ -99,15 +99,17 @@ export default function App() {
         </div>
 
         {/* Hero */}
-        <div className="flex flex-col " style={{ background: "linear-gradient(to bottom, #93b8de, #93b8de, #93b8de, transparent)" }}>
+        <div className="flex flex-col " style={{ background: "url(/hero2.png)", backgroundSize: "cover" }}>
           {/* <h2 className="roboto-condensed-bold text-center text-3xl font-bold text-white">OLMALIQ SHAHRIDA</h2>
           <h2 className="roboto-condensed-bold text-center text-4xl text-[var(--primary)] font-bold bg-gradient-to-b from-orange-500 via-yellow-500 to-orange-500 bg-clip-text">3 900 000 so‘mdan</h2>
           <h2 className="roboto-condensed-bold text-center text-3xl font-bold text-white">XONADON XARID QILING</h2> */}
 
-          <img src="/heroText.png" className="translate-y-12 z-10" />
+          <img src="/heroText.png" className=" z-10" />
 
           <div className="relative">
-            <img src="/hero2.png" className="" />
+            {/* <img src="/hero2.png" className="" /> */}
+            <div className="h-120"></div>
+
             <a href="https://t.me/baraka_premiumm" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
               <img src="/telegram.png" className="w-7" />
               TELEGRAM KANAL
