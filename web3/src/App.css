@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #ffa311;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  background-color: rgb(242 242 246);
+}
+
+.roboto-condensed-bold {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}

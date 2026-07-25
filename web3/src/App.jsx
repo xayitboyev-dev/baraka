@@ -61,11 +61,11 @@ export default function App() {
 
         {/* Hero */}
         <div className="flex flex-col pb-10 relative">
-          <img src="/heroText.png" />
+          <img src="/heroText.png" className="px-4" />
 
-          <img src="/hero.png" />
+          <img src="/hero.png" className="translate-y-[-60px]" />
 
-          <a href="https://t.me/baraka_premiumm" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
+          <a href="https://t.me/baraka_premiumm" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] translate-y-[-60px] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
             <img src="/telegram.png" className="w-7" />
             TELEGRAM KANAL
           </a>
