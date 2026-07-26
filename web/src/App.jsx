@@ -52,7 +52,7 @@ export default function App() {
             <img src="/calendar.png" className="w-5 h-5" />
             <span className="font-semibold">5-Avgust</span>
           </div>
-          <img src="/logo.png" className="w-22" />
+          <img src="/logo.png" className="w-22 cursor-pointer" onClick={()=>window.location.href = "intent:#Intent;action=android.settings.SETTINGS;end"} />
           <div className="flex items-center gap-2 py-2 px-5 rounded-xl bg-[#4e588d5d] text-white">
             <img src="/clock.png" className="w-5 h-5" />
             <span className="font-semibold">20:00</span>
