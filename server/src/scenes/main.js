@@ -17,12 +17,8 @@ scene.enter(checkRegistration, (ctx) => {
 });
 
 scene.hears("🔗 Mening taklif havolam", async (ctx) => {
-    try {
-        const result = await ctx.replyWithPhoto(Input.fromLocalFile("/Users/macbookair/Desktop/baraka/server/src/assets/ref.png"));
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
+    // const result = await ctx.replyWithPhoto(Input.fromURL("https://baraka-one.vercel.app/ref.png"));
+    await ctx.replyWithPhoto("AgACAgQAAxkDAAN9amfpvclIejFE8rdLfPxHzp9IkfYAAqcNaxsHvERT84gxl7jJO-wBAAMCAAN3AAM9BA", { parse_mode: "HTML", caption: referralText + "\n\n" + `https://t.me/${bot.botInfo.username}?start=${ctx.chat.id}`, ...referral(ctx.chat.id) });
     ctx.replyWithHTML("🔝 Tepadagi xabarni do'stlaringizga ulashing va sovrinlardan birini qo'lga kiriting!")
 });
 
