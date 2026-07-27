@@ -15,8 +15,8 @@ module.exports = async (ctx, next) => {
         // create new user in the database
         const lastUser = await User.findOne().sort({ _id: -1 });
         const orderId = lastUser?.orderId + 1 || 1;
-        // await User.create({ ...ctx.chat, orderId, photo: file?.file_path, ...(ctx.startPayload && parseInt(ctx.startPayload) && { referredBy: parseInt(ctx.startPayload) }), active: true });
-        await User.create({ ...ctx.chat, orderId, photo: file?.file_path, active: true });
+        await User.create({ ...ctx.chat, orderId, photo: file?.file_path, ...(ctx.startPayload && parseInt(ctx.startPayload) && { referredBy: parseInt(ctx.startPayload) }), active: true });
+        // await User.create({ ...ctx.chat, orderId, photo: file?.file_path, active: true });
     } catch (error) {
         // update if the user already exists in the database
         await User.findOneAndUpdate({ id: ctx.chat.id }, { ...ctx.chat, photo: file?.file_path, active: true });
