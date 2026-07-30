@@ -44,7 +44,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className='min-h-screen bg-linear-to-b from-[#010620ff] to-[#001165ff] pb-10' color="#4e588d5d">
+    <div className='min-h-screen bg-linear-to-b from-[#010620ff] to-[#001165ff] ' color="#4e588d5d">
       <div className="flex flex-col gap-4 md:max-w-md mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-6 mb-[-18px]">
@@ -61,12 +61,12 @@ export default function App() {
 
         {/* Hero */}
         <div className="flex flex-col pb-26 relative">
-          <img src="/heroText.png" />
+          <img src="/heroText.png" className="px-2"/>
 
           <img src="/hero.png" className="mt-6 p-4" />
 
-          <a href="https://t.me/barakapremiumbot" className="absolute text-white text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-[var(--primary)] rounded-full py-5">
-            <img src="/telegram.png" className="w-7" />
+          <a href="https://t.me/barakapremiumbot" className="absolute text-blue-900 text-2xl w-[84%] font-bold bottom-0 left-[50%] translate-x-[-50%] flex items-center justify-center gap-4 bg-white rounded-2xl py-5">
+            <img src="/bot.png" className="w-7" />
             BOTGA O'TING
           </a>
         </div>
@@ -79,7 +79,7 @@ export default function App() {
         </div>
 
         {/* Section counter */}
-        <div className="flex flex-col gap-4 items-center bg-[#4e588d5d] rounded-4xl p-4 m-3 mt-0">
+        <div className="flex flex-col gap-4 items-center bg-[#4e588d5d] rounded-4xl p-4 mx-4">
           <h2 className="text-[var(--primary)] font-bold text-xl">AKSIYAGACHA QOLDI</h2>
 
           <div className="flex items-center gap-1 w-full text-2xl font-semibold">
@@ -104,6 +104,8 @@ export default function App() {
             </div>
           </div>
         </div>
+
+        <img src="/steps.png" className="w-screen" />
       </div>
     </div>
   );
