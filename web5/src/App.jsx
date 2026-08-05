@@ -10,34 +10,32 @@ function App() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
+    console.log("loading", loading);
     if (loading) return;
 
-    setLoading(true);
+    // setLoading(true);
 
     const formData = new FormData(e.currentTarget);
 
     try {
-      await axios({
+      const { data } = await axios({
         method: "post",
-        url: `https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage`,
-        params: {
-          chat_id: import.meta.env.VITE_CHAT_ID,
-          text: `<b>🔔 New Lead</b>\n\nIsm: ${formData.get("name")}\nTelefon: +998${formData.get("phone").replaceAll(" ", "")}`,
-          parse_mode: "HTML",
-          message_thread_id: import.meta.env.VITE_THREAD_ID
+        url: 'http://localhost:3000/live_users',
+        data: {
+          name: formData.get("name"),
+          phone: formData.get("phone"),
         },
       });
 
-      toast.success("Yuborildi");
+      toast.success(data.message);
       e.target.reset();
 
       setTimeout(() => {
         window.location.href = "https://t.me/baraka_premiumm";
       }, 500);
     } catch (error) {
-      toast.error(error.response?.data || error.message);
+      toast.error(error.response?.data?.message || error.message);
     };
-
 
     setLoading(false);
   };

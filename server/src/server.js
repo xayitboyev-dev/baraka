@@ -32,20 +32,20 @@ app.get("/users/random", async (req, res) => {
 });
 
 app.post("/live_users", async (req, res) => {
-    const { name, phoneNumber } = req.body;
+    let { name, phone } = req.body;
 
-    if (!name || !phoneNumber) {
-        return res.status(400).json({ error: "Ism va telefon raqam talab qilinadi" });
+    phone = '+998' + phone.replaceAll(" ", "");
+
+    if (!name || !phone) {
+        return res.status(400).json({ message: "Ism va telefon raqam talab qilinadi" });
     };
 
     try {
-        const user = await LiveUser.create({ name, phoneNumber });
+        const user = await LiveUser.create({ name, phone });
 
         res.json({ message: "Ma'lumotlaringiz qo'shildi", user });
     } catch (error) {
-        if (error.code === 11000) {
-            return res.status(400).json({ error: "Bu raqam allaqachon ro'yxatdan o'tgan" });
-        };
+        return res.status(400).json({ message: error.code === 11000 ? "Bu raqam allaqachon ro'yxatdan o'tgan" : "Noto'g'ri telefon raqam" });
     };
 });
 
