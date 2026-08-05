@@ -31,6 +31,13 @@ app.get("/users/random", async (req, res) => {
     return res.json(user);
 });
 
+
+app.get("/live_users", async (req, res) => {
+    const result = await LiveUser.find().sort({ createdAt: -1 });
+
+    res.json(result);
+});
+
 app.post("/live_users", async (req, res) => {
     let { name, phone } = req.body;
 
