@@ -1,6 +1,7 @@
 const express = require('express');
 const bot = require('./core/bot');
 const User = require('./models/User');
+const LiveUser = require('./models/LiveUser');
 const getUsers = require("./services/getUsers");
 const cors = require("cors");
 const app = express();
@@ -28,6 +29,24 @@ app.get("/users/random", async (req, res) => {
     delete user.static;
 
     return res.json(user);
+});
+
+app.post("/live_users", async (req, res) => {
+    const { name, phoneNumber } = req.body;
+
+    if (!name || !phoneNumber) {
+        return res.status(400).json({ error: "Ism va telefon raqam talab qilinadi" });
+    };
+
+    try {
+        const user = await LiveUser.create({ name, phoneNumber });
+
+        res.json({ message: "Ma'lumotlaringiz qo'shildi", user });
+    } catch (error) {
+        if (error.code === 11000) {
+            return res.status(400).json({ error: "Bu raqam allaqachon ro'yxatdan o'tgan" });
+        };
+    };
 });
 
 app.get("/stats", async (req, res) => {
