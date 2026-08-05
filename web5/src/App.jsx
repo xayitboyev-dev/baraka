@@ -20,7 +20,7 @@ function App() {
     try {
       const { data } = await axios({
         method: "post",
-        url: 'http://localhost:3000/live_users',
+        url: 'https://baraka.karvontaxi.uz/live_users',
         data: {
           name: formData.get("name"),
           phone: formData.get("phone"),
