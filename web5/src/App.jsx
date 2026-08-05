@@ -59,9 +59,9 @@ function App() {
 
         <button type="submit" className='cursor-pointer w-full h-12 text-white hover:bg-yellow-400 bg-yellow-500 rounded-xl'>Yuborish</button>
 
-        <a href='https://t.me/barakapremiumbot' className="flex gap-2 items-center mt-4 border-b-1 border-gray-400 pb-1 pr-3">
+        <a href='https://t.me/baraka_premiumm' className="flex gap-2 items-center mt-4 border-b-1 border-gray-400 pb-1 pr-3">
           <img src="/images/telegram.webp" className='w-8 h-8' />
-          <span className='font-light text-gray-300'>Konkursda ishtirok etish</span>
+          <span className='font-light text-gray-300'>Telegram Kanal</span>
         </a>
       </form>
 
