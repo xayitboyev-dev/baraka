@@ -29,6 +29,8 @@ export default function LiveUsers() {
             <div className="min-h-screen bg-slate-100 w-xl flex flex-col gap-6 p-10">
                 <h1 className='text-2xl text-slate-900 font-semibold'>Ishtirokchilar ro'yxati</h1>
 
+                <button onClick={fetchData} className="flex justify-center items-center gap-1 cursor-pointer  bg-blue-600 text-white rounded-xl px-6 py-2">Refresh <RefreshCcw size={16} className="ml-2" /></button>
+
                 <div className="flex flex-col gap-2 max-w-xl">
                     {loading ? (
                         <p>Loading...</p>
