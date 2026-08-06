@@ -44,7 +44,7 @@ export default function LiveUsers() {
 
                                     <div className="flex flex-col">
                                         <p className="font-semibold truncate w-45">{user.name}</p>
-                                        <p className="text-sm text-gray-500">{formatPhone(user.phone).slice(0, -5) + " XX XX"}</p>
+                                        <p className="text-sm text-gray-500">{formatPhone(user.phone)}</p>
                                     </div>
                                     <p className="text-slate-600 ml-auto font-bold mr-2">{user.referralsCount}</p>
                                 </div>
